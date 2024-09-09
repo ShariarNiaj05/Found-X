@@ -1,4 +1,4 @@
-import { Navbar } from "@/src/components/navbar";
+import { Navbar } from "@/src/components/ui/navbar";
 
 import { ReactNode } from "react";
 
