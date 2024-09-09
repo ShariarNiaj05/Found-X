@@ -3,7 +3,7 @@ import Container from "../../ui/Container";
 import Link from "next/link";
 
 const RecentPosts = async () => {
-  const res = fetch("");
+  const res = fetch("/");
   return (
     <Container>
       <div className="section-title my-8">
