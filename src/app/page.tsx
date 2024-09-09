@@ -23,7 +23,7 @@ export default function Home() {
       </div>
 
       <div className="flex gap-3">
-        <Link
+        {/*  <Link
           isExternal
           className={buttonStyles({
             color: "primary",
@@ -33,15 +33,15 @@ export default function Home() {
           href={siteConfig.links.docs}
         >
           Documentation
-        </Link>
-        <Link
+        </Link> */}
+        {/*   <Link
           isExternal
           className={buttonStyles({ variant: "bordered", radius: "full" })}
           href={siteConfig.links.github}
         >
           <GithubIcon size={20} />
           GitHub
-        </Link>
+        </Link> */}
       </div>
 
       <div className="mt-8">
