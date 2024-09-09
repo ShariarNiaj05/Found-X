@@ -3,7 +3,7 @@ import Container from "../../ui/Container";
 import Link from "next/link";
 
 const RecentPosts = async () => {
-  const res = fetch(
+  const res = await fetch(
     "http://localhost:5000/api/v1/items?sort=-createdAt&limit=9"
   );
   return (
