@@ -6,6 +6,9 @@ const RecentPosts = async () => {
   const res = await fetch(
     "http://localhost:5000/api/v1/items?sort=-createdAt&limit=9"
   );
+
+  const data = res.json();
+  console.log(data);
   return (
     <Container>
       <div className="section-title my-8">
