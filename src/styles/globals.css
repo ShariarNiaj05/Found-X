@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-\[url\(\'\/glass\.jpg\'\)\] {
+  background-image: url("/glass.jpg");
+}
