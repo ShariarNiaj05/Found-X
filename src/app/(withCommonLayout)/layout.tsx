@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 const layout = ({ children }: { children: ReactNode }) => {
   return (
     <div>
-      <div className="relative flex flex-col h-screen">
+      <div>
         <Navbar />
         <main>{children}</main>
       </div>
