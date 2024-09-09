@@ -1,14 +1,11 @@
 import { Button } from "@nextui-org/button";
 import Container from "../../ui/Container";
 import Link from "next/link";
+import { getRecentPost } from "@/src/services/RecentPosts";
 
 const RecentPosts = async () => {
-  /*  const res = await fetch(
-    "http://localhost:5000/api/v1/items?sort=-createdAt&limit=9"
-  );
+  const { data: posts } = await getRecentPost();
 
-  const data = res.json();
-  console.log(data); */
   return (
     <Container>
       <div className="section-title my-8">
@@ -18,7 +15,8 @@ const RecentPosts = async () => {
         </p>
       </div>
       <div className="my-8 grid justify-center gap-10 sm:grid-cols-1 md:grid-cols-4">
-        Recent Post
+      {posts.map((item) => (
+          <p>{item.title}</p>
       </div>
       <div className="flex justify-center">
         <Button className="rounded-md bg-default-900 text-default" size="md">
