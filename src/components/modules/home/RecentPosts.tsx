@@ -3,12 +3,12 @@ import Container from "../../ui/Container";
 import Link from "next/link";
 
 const RecentPosts = async () => {
-  const res = await fetch(
+  /*  const res = await fetch(
     "http://localhost:5000/api/v1/items?sort=-createdAt&limit=9"
   );
 
   const data = res.json();
-  console.log(data);
+  console.log(data); */
   return (
     <Container>
       <div className="section-title my-8">
