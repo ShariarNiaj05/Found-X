@@ -3,7 +3,6 @@ import Container from "../../ui/Container";
 import Link from "next/link";
 
 const RecentPosts = () => {
-  const { data: posts } = await getRecentPosts();
   return (
     <Container>
       <div className="section-title my-8">
