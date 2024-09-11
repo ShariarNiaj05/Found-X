@@ -1,5 +1,5 @@
 const layout = ({ children }) => {
-  return <div></div>;
+  return <div>{children}</div>;
 };
 
 export default layout;
