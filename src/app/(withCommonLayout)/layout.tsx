@@ -1,16 +1,10 @@
-import { Navbar } from "@/src/components/ui/navbar";
+import { Navbar } from "@/src/components/UI/navbar";
 
-import { ReactNode } from "react";
-
-const layout = ({ children }: { children: ReactNode }) => {
+export default function layout({ children }: { children: React.ReactNode }) {
   return (
-    <div>
-      <div>
-        <Navbar />
-        <main>{children}</main>
-      </div>
+    <div className="relative flex flex-col h-screen">
+      <Navbar />
+      <main>{children}</main>
     </div>
   );
-};
-
-export default layout;
+}

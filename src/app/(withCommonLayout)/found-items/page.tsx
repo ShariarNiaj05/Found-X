@@ -1,5 +1,7 @@
-const page = () => {
-  return <div>found items</div>;
-};
-
-export default page;
+export default function page() {
+  return (
+    <div>
+      <h1> This is Found items page </h1>
+    </div>
+  );
+}

@@ -1,10 +1,10 @@
 import { Button } from "@nextui-org/button";
-import Container from "../../ui/Container";
 import Link from "next/link";
-import { getRecentPost } from "@/src/services/RecentPosts";
+import Container from "../../UI/Container";
+import { getRecentPosts } from "@/src/services/RecentPosts";
 
-const RecentPosts = async () => {
-  const { data: posts } = await getRecentPost();
+export default async function RecentPosts() {
+  const { data: posts } = await getRecentPosts();
 
   return (
     <Container>
@@ -26,6 +26,4 @@ const RecentPosts = async () => {
       </div>
     </Container>
   );
-};
-
-export default RecentPosts;
+}
