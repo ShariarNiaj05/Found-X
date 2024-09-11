@@ -6,7 +6,7 @@ import { Button } from "@nextui-org/button";
 import Link from "next/link";
 
 const loading = () => {
-  const randomNumber = Math.random() * 9;
+  const randomNumber = Math.floor(Math.random() * 9);
   return (
     <Container>
       <div className="section-title my-8">
@@ -16,7 +16,7 @@ const loading = () => {
         </p>
       </div>
       <div className="my-8 grid justify-center gap-10 sm:grid-cols-1 md:grid-cols-4">
-        {[...Array(9)].map((i) => (
+        {[...Array(randomNumber)].map((i) => (
           <CardSkeleton key={i} />
         ))}
       </div>
