@@ -54,6 +54,9 @@ export const Navbar = () => {
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>
+        <NavbarItem className="hidden sm:flex gap-2">
+          <NavbarDropdown />
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
