@@ -1,3 +1,9 @@
+import Card from "@/src/components/UI/Card";
+import Container from "@/src/components/UI/Container";
+import { IPost } from "@/src/types";
+import { Button } from "@nextui-org/button";
+import Link from "next/link";
+
 const loading = () => {
   return (
     <Container>
@@ -8,8 +14,8 @@ const loading = () => {
         </p>
       </div>
       <div className="my-8 grid justify-center gap-10 sm:grid-cols-1 md:grid-cols-4">
-        {[...Array(9)].map((item: IPost) => (
-          <Card key={item._id} post={item} />
+        {[...Array(9)].map(() => (
+          <p>Loading...</p>
         ))}
       </div>
       <div className="flex justify-center">
