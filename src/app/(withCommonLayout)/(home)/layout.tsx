@@ -1,7 +1,18 @@
 import { ReactNode } from "react";
 
-const layout = ({ children }: { children: ReactNode }) => {
-  return <div>{children}</div>;
+const layout = ({
+  children,
+  recentPosts,
+}: {
+  children: ReactNode;
+  recentPosts: ReactNode;
+}) => {
+  return (
+    <>
+      {children}
+      {recentPosts}
+    </>
+  );
 };
 
 export default layout;
