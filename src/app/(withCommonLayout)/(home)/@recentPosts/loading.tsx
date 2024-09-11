@@ -6,6 +6,7 @@ import { Button } from "@nextui-org/button";
 import Link from "next/link";
 
 const loading = () => {
+  const randomNumber = Math.random() * 9;
   return (
     <Container>
       <div className="section-title my-8">
