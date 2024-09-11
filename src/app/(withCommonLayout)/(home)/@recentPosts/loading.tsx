@@ -1,4 +1,5 @@
 import Card from "@/src/components/UI/Card";
+import CardSkeleton from "@/src/components/UI/CardSkeleton";
 import Container from "@/src/components/UI/Container";
 import { IPost } from "@/src/types";
 import { Button } from "@nextui-org/button";
@@ -14,8 +15,8 @@ const loading = () => {
         </p>
       </div>
       <div className="my-8 grid justify-center gap-10 sm:grid-cols-1 md:grid-cols-4">
-        {[...Array(9)].map(() => (
-          <p>Loading...</p>
+        {[...Array(9)].map((i) => (
+          <CardSkeleton key={i} />
         ))}
       </div>
       <div className="flex justify-center">
