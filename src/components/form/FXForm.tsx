@@ -1,6 +1,10 @@
+import { ReactNode } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
-const FXForm = ({ children }) => {
+interface IProps {
+  children: ReactNode;
+}
+const FXForm = ({ children }: IProps) => {
   const methods = useForm();
 
   return (
