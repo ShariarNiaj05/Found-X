@@ -1,9 +1,13 @@
 import { FormProvider, useForm } from "react-hook-form";
 
-const FXForm = () => {
+const FXForm = ({ children }) => {
   const methods = useForm();
 
-  return <FormProvider>FXForm</FormProvider>;
+  return (
+    <FormProvider {...methods}>
+      <form>{children}</form>
+    </FormProvider>
+  );
 };
 
 export default FXForm;
