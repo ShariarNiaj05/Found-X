@@ -9,6 +9,10 @@ const FXForm = ({ children, onSubmit, defaultValues, resolver }) => {
   if (!!defaultValues) {
     formConfig["defaultValues"] = defaultValues;
   }
+
+  if (!!resolver) {
+    resolver["defaultValues"] = resolver;
+  }
   const methods = useForm();
   const SubmitHandler = methods.handleSubmit;
   return (
