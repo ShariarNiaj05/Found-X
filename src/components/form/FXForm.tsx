@@ -1,11 +1,16 @@
 import { ReactNode } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 
+interface IFormConfig {
+  defaultValues?: Record<string, any>;
+  resolver?: any;
+}
+
 interface IProps {
   children: ReactNode;
 }
 const FXForm = ({ children, onSubmit, defaultValues, resolver }) => {
-  let formConfig = {};
+  let formConfig: IFormConfig = {};
   if (!!defaultValues) {
     formConfig["defaultValues"] = defaultValues;
   }
