@@ -11,7 +11,7 @@ const FXForm = ({ children, onSubmit, defaultValues, resolver }) => {
   }
 
   if (!!resolver) {
-    resolver["defaultValues"] = resolver;
+    resolver["resolver"] = resolver;
   }
   const methods = useForm();
   const SubmitHandler = methods.handleSubmit;
