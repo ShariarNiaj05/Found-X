@@ -9,7 +9,7 @@ export function middleware(request: NextRequest) {
   const user = undefined;
   if (!user) {
     if (AuthRoutes.includes(pathName)) {
-      return NextResponse.redirect(new URL(pathName, request.url));
+      return NextResponse.next();
     }
   }
 
