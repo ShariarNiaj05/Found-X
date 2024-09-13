@@ -4,8 +4,8 @@ import type { NextRequest } from "next/server";
 const AuthRoutes = ["/login", "/register"];
 
 const roleBasedRoutes = {
-  USER: [],
-  ADMIN: [],
+  USER: ["/profile"],
+  ADMIN: ["/admin"],
 };
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
