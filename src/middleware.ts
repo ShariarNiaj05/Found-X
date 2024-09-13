@@ -5,7 +5,7 @@ const AuthRoutes = ["/login", "/register"];
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
-  const pathName = request.nextUrl;
+  const { pathName } = request.nextUrl;
   const user = undefined;
   if (!user) {
     if (AuthRoutes.includes(pathName)) {
@@ -18,5 +18,5 @@ export function middleware(request: NextRequest) {
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/profile", "/admin"],
+  matcher: ["/profile", "/admin", "/login", "/register"],
 };
