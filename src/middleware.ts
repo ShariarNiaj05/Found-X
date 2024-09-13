@@ -17,7 +17,7 @@ export function middleware(request: NextRequest) {
   const user = {
     name: "Shariar",
     token: "adsf asda",
-    role: "ADMIN",
+    role: "USER",
   };
 
   //   const user = undefined;
