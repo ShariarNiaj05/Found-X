@@ -3,6 +3,11 @@ import type { NextRequest } from "next/server";
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
+  const user = {
+    name: "Shariar",
+    token: "token",
+    role: "USER",
+  };
   return NextResponse.redirect(new URL("/", request.url));
 }
 
