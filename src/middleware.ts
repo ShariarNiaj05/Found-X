@@ -11,23 +11,28 @@ const roleBasedRoutes = {
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
   console.log(pathname);
-  //   const user = undefined;
+
   const user = {
     name: "Shariar",
-    role: "USER",
+    token: "adsf asda",
+    role: "ADMIN",
   };
+
+  //   const user = undefined;
+
   if (!user) {
     if (AuthRoutes.includes(pathname)) {
       return NextResponse.next();
+    } else {
+      return NextResponse.redirect(new URL("/login", request.url));
     }
-  } else {
-    return NextResponse.redirect(new URL("/login", request.url));
-    // console.log("can got there");
   }
 
-  if (user?.role && roleBasedRoutes[user?.role]) {
-    const routes = roleBasedRoutes[user?.role];
+  if (user?.role && roleBasedRoutes[user?.role as Role]) {
+    const routes = roleBasedRoutes[user?.role as Role];
+
     if (routes.some((route) => pathname.match(route))) {
       return NextResponse.next();
     }
