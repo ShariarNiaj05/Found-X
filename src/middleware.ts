@@ -25,6 +25,9 @@ export function middleware(request: NextRequest) {
 
   if (user?.role && roleBasedRoutes[user?.role]) {
     const routes = roleBasedRoutes[user?.role];
+    if (routes.some((route) => pathname.match(route))) {
+      return NextResponse.next();
+    }
   }
 
   return NextResponse.redirect(new URL("/", request.url));
