@@ -8,6 +8,9 @@ export function middleware(request: NextRequest) {
     token: "token",
     role: "USER",
   };
+  if (user) {
+    return NextResponse.next;
+  }
   return NextResponse.redirect(new URL("/", request.url));
 }
 
