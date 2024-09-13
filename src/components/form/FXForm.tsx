@@ -11,7 +11,7 @@ interface IProps extends IFormConfig {
   onSubmit: SubmitHandler<any>;
 }
 const FXForm = ({ children, onSubmit, defaultValues, resolver }: IProps) => {
-  let formConfig: IFormConfig = {};
+  const formConfig: IFormConfig = {};
   if (!!defaultValues) {
     formConfig["defaultValues"] = defaultValues;
   }
