@@ -5,14 +5,16 @@ const AuthRoutes = ["/login", "/register"];
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
-  const { pathName } = request.nextUrl;
+  const { pathname } = request.nextUrl;
+  console.log(pathname);
   const user = "undefined";
   if (!user) {
-    if (AuthRoutes.includes(pathName)) {
+    if (AuthRoutes.includes(pathname)) {
       return NextResponse.next();
     }
   } else {
     return NextResponse.redirect(new URL("/login", request.url));
+    // console.log("can got there");
   }
 
   return NextResponse.redirect(new URL("/", request.url));
