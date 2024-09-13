@@ -30,8 +30,8 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  if (user?.role && roleBasedRoutes[user?.role as Role]) {
-    const routes = roleBasedRoutes[user?.role as Role];
+  if (user?.role && roleBasedRoutes[user?.role]) {
+    const routes = roleBasedRoutes[user?.role];
 
     if (routes.some((route) => pathname.match(route))) {
       return NextResponse.next();
