@@ -11,7 +11,8 @@ const roleBasedRoutes = {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   console.log(pathname);
-  const user = undefined;
+  //   const user = undefined;
+  const user = "User exist";
   if (!user) {
     if (AuthRoutes.includes(pathname)) {
       return NextResponse.next();
