@@ -6,10 +6,11 @@ interface IFormConfig {
   resolver?: any;
 }
 
-interface IProps {
+interface IProps extends IFormConfig {
   children: ReactNode;
+  onSubmit: SubmitHandler<any>;
 }
-const FXForm = ({ children, onSubmit, defaultValues, resolver }) => {
+const FXForm = ({ children, onSubmit, defaultValues, resolver }: IProps) => {
   let formConfig: IFormConfig = {};
   if (!!defaultValues) {
     formConfig["defaultValues"] = defaultValues;
