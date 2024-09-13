@@ -22,6 +22,10 @@ export function middleware(request: NextRequest) {
     // console.log("can got there");
   }
 
+  if (user?.role && roleBasedRoutes[user?.role]) {
+    const routes = roleBasedRoutes[user?.role];
+  }
+
   return NextResponse.redirect(new URL("/", request.url));
 }
 
