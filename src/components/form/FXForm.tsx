@@ -4,12 +4,12 @@ import { FormProvider, useForm } from "react-hook-form";
 interface IProps {
   children: ReactNode;
 }
-const FXForm = ({ children }: IProps) => {
+const FXForm = ({ children }) => {
   const methods = useForm();
-
+  const SubmitHandler = methods.handleSubmit;
   return (
     <FormProvider {...methods}>
-      <form>{children}</form>
+      <form onSubmit={SubmitHandler}>{children}</form>
     </FormProvider>
   );
 };
