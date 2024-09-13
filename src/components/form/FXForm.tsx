@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { FormProvider, useForm } from "react-hook-form";
+import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 
 interface IFormConfig {
   defaultValues?: Record<string, any>;
