@@ -9,7 +9,7 @@ const FXForm = ({ children }) => {
   const SubmitHandler = methods.handleSubmit;
   return (
     <FormProvider {...methods}>
-      <form onSubmit={SubmitHandler}>{children}</form>
+      <form onSubmit={SubmitHandler(onSubmit)}>{children}</form>
     </FormProvider>
   );
 };
