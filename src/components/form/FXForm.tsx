@@ -4,7 +4,11 @@ import { FormProvider, useForm } from "react-hook-form";
 interface IProps {
   children: ReactNode;
 }
-const FXForm = ({ children, onSubmit, defaultValue, resolver }) => {
+const FXForm = ({ children, onSubmit, defaultValues, resolver }) => {
+  let formConfig = {};
+  if (!!defaultValues) {
+    formConfig["defaultValues"] = defaultValues;
+  }
   const methods = useForm();
   const SubmitHandler = methods.handleSubmit;
   return (
