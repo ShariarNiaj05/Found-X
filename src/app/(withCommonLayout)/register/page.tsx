@@ -10,14 +10,14 @@ import registerValidationSchema from "@/src/schemas/register.schema";
 import { registerUser } from "@/src/services/AuthService";
 import { useMutation } from "@tanstack/react-query";
 
+const {mutate: handleUserRegistration, isPending, data, isError, error} = useMutation({
+  mutationKey: ["user_registration"],
+  mutationFn: async (userData) => await registerUser(userData);
+});
+
 export default function page() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    const muation = useMutation({
-      mutationKey: ["user_registration"],
-      mutationFn: async (userData) => await registerUser(userData);
-    });
-
-    const userData = {
+        const userData = {
       ...data,
       profilePhoto:
         "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
