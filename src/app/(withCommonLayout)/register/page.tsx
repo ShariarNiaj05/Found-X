@@ -20,6 +20,9 @@ export default function page() {
   } = useMutation({
     mutationKey: ["user_registration"],
     mutationFn: async (userData) => await registerUser(userData),
+    onSuccess: () => {
+      console.log("user creation completed");
+    },
   });
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
