@@ -1,4 +1,5 @@
 import FXForm from "@/src/components/form/FXForm";
+import FXInput from "@/src/components/form/FXInput";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
 import { FieldValues, SubmitHandler, useFormContext } from "react-hook-form";
