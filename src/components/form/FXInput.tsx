@@ -1,5 +1,5 @@
-import { Input } from "@nextui-org/input";
 import { useFormContext } from "react-hook-form";
+import { Input } from "@nextui-org/input";
 
 interface IProps {
   variant?: "flat" | "bordered" | "faded" | "underlined";
