@@ -4,6 +4,7 @@ import registerValidationSchema from "@/src/schemas/register.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
+import { FieldValues, SubmitHandler } from "react-hook-form";
 
 export default function page() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
