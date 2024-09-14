@@ -1,4 +1,5 @@
 import { Input } from "@nextui-org/input";
+import { useFormContext } from "react-hook-form";
 
 interface IProps {
   variant?: "flat" | "bordered" | "faded" | "underlined";
@@ -17,6 +18,10 @@ const FXInput = ({
   label,
   name,
 }: IProps) => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
   return (
     <Input
       {...register(name)}
