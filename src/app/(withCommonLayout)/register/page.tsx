@@ -12,7 +12,11 @@ import { useMutation } from "@tanstack/react-query";
 
 export default function page() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    const muation = useMutation();
+    const muation = useMutation({
+      mutationKey: ["user_registration"],
+      mutationFn: async () => await registerUser(userData);
+    });
+
     const userData = {
       ...data,
       profilePhoto:
@@ -20,7 +24,7 @@ export default function page() {
     };
 
     console.log("Inside form user data: ", userData);
-    registerUser(userData);
+   
   };
   return (
     <div className="flex h-[calc(100vh-100px)] flex-col items-center justify-center">
