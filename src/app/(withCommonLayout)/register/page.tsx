@@ -1,9 +1,13 @@
 import FXForm from "@/src/components/form/FXForm";
 import FXInput from "@/src/components/form/FXInput";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
 
 export default function page() {
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    console.log("Inside form user data: ", data);
+  };
   return (
     <div className="flex h-[calc(100vh-100px)] flex-col items-center justify-center">
       <h3 className="my-2 text-xl font-bold">Register with FoundX</h3>
