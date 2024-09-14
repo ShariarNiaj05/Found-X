@@ -14,7 +14,7 @@ export default function page() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const muation = useMutation({
       mutationKey: ["user_registration"],
-      mutationFn: async () => await registerUser(userData);
+      mutationFn: async (userData) => await registerUser(userData);
     });
 
     const userData = {
