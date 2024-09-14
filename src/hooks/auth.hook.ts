@@ -10,5 +10,8 @@ export const useUserRegistration = () => {
     onSuccess: () => {
       toast.success("user creation completed");
     },
+    onError: (error) => {
+      toast.error(error.message);
+    },
   });
 };
