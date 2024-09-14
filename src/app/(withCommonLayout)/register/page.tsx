@@ -7,6 +7,7 @@ import FXForm from "@/src/components/form/FXForm";
 import FXInput from "@/src/components/form/FXInput";
 import registerValidationSchema from "@/src/schemas/register.schema";
 import { useUserRegistration } from "@/src/hooks/auth.hook";
+import { useEffect } from "react";
 
 export default function page() {
   const {
@@ -16,6 +17,12 @@ export default function page() {
     isError,
     error,
   } = useUserRegistration();
+
+  useEffect(() => {
+    if (isPending) {
+      // Handle Loading satate
+    }
+  }, [isPending]);
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const userData = {
