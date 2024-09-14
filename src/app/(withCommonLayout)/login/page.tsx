@@ -8,10 +8,7 @@ const LoginPage = () => {
       <h3 className="my-2 text-2xl font-bold">Login with FoundX</h3>
       <p className="mb-4">Welcome Back! Let&lsquo;s Get Started</p>
       <div className="w-[35%]">
-        <FXForm
-          onSubmit={onSubmit}
-          resolver={zodResolver(loginValidationSchema)}
-        >
+        <FXForm>
           <div className="py-3">
             <FXInput name="email" label="Email" type="email" />
           </div>
