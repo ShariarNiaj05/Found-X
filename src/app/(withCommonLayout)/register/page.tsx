@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function page() {
   return (
     <div className="flex h-[calc(100vh-100px)] flex-col items-center justify-center">
