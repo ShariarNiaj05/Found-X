@@ -9,6 +9,7 @@ import FXInput from "@/src/components/form/FXInput";
 import registerValidationSchema from "@/src/schemas/register.schema";
 import { registerUser } from "@/src/services/AuthService";
 import { useMutation } from "@tanstack/react-query";
+import { useUserRegistration } from "@/src/hooks/auth.hook";
 
 export default function page() {
   /*   const {
@@ -24,7 +25,13 @@ export default function page() {
       console.log("user creation completed");
     },
   }); */
-
+  const {
+    mutate: handleUserRegistration,
+    isPending,
+    data,
+    isError,
+    error,
+  } = useUserRegistration(userData);
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const userData = {
       ...data,
