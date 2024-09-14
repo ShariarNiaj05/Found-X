@@ -6,7 +6,6 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/dropdown";
-
 import { useRouter } from "next/navigation";
 
 export default function NavbarDropdown() {

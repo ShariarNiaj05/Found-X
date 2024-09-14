@@ -1,9 +1,8 @@
-import Card from "@/src/components/UI/Card";
-import CardSkeleton from "@/src/components/UI/CardSkeleton";
-import Container from "@/src/components/UI/Container";
-import { IPost } from "@/src/types";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
+
+import CardSkeleton from "@/src/components/UI/CardSkeleton";
+import Container from "@/src/components/UI/Container";
 
 const loading = () => {
   const randomNumber = Math.floor(Math.random() * 9);
