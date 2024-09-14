@@ -24,7 +24,7 @@ export default function page() {
     };
 
     console.log("Inside form user data: ", userData);
-   
+    handleUserRegistration(userData)
   };
   return (
     <div className="flex h-[calc(100vh-100px)] flex-col items-center justify-center">
