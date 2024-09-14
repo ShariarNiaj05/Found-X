@@ -1,3 +1,4 @@
+"use client";
 import FXForm from "@/src/components/form/FXForm";
 import FXInput from "@/src/components/form/FXInput";
 import registerValidationSchema from "@/src/schemas/register.schema";
