@@ -18,11 +18,11 @@ export default function page() {
     error,
   } = useUserRegistration();
 
-  useEffect(() => {
+  /*   useEffect(() => {
     if (isPending) {
       // Handle Loading satate
     }
-  }, [isPending]);
+  }, [isPending]); */
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const userData = {
