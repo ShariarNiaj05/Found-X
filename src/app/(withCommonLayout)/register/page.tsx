@@ -12,26 +12,14 @@ import { useMutation } from "@tanstack/react-query";
 import { useUserRegistration } from "@/src/hooks/auth.hook";
 
 export default function page() {
-  /*   const {
-    mutate: handleUserRegistration,
-    isPending,
-    data,
-    isError,
-    error,
-  } = useMutation({
-    mutationKey: ["user_registration"],
-    mutationFn: async (userData) => await registerUser(userData),
-    onSuccess: () => {
-      console.log("user creation completed");
-    },
-  }); */
   const {
     mutate: handleUserRegistration,
     isPending,
     data,
     isError,
     error,
-  } = useUserRegistration(userData);
+  } = useUserRegistration();
+
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const userData = {
       ...data,
