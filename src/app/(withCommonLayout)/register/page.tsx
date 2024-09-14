@@ -8,9 +8,11 @@ import FXForm from "@/src/components/form/FXForm";
 import FXInput from "@/src/components/form/FXInput";
 import registerValidationSchema from "@/src/schemas/register.schema";
 import { registerUser } from "@/src/services/AuthService";
+import { useMutation } from "@tanstack/react-query";
 
 export default function page() {
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    const muation = useMutation();
     const userData = {
       ...data,
       profilePhoto:
