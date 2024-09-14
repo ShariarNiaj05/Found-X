@@ -3,12 +3,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "@nextui-org/button";
 import Link from "next/link";
 import { FieldValues, SubmitHandler } from "react-hook-form";
-
 import FXForm from "@/src/components/form/FXForm";
 import FXInput from "@/src/components/form/FXInput";
 import registerValidationSchema from "@/src/schemas/register.schema";
-import { registerUser } from "@/src/services/AuthService";
-import { useMutation } from "@tanstack/react-query";
 import { useUserRegistration } from "@/src/hooks/auth.hook";
 
 export default function page() {
