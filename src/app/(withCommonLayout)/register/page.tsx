@@ -11,7 +11,7 @@ import { registerUser } from "@/src/services/AuthService";
 import { useMutation } from "@tanstack/react-query";
 
 export default function page() {
-  const {
+  /*   const {
     mutate: handleUserRegistration,
     isPending,
     data,
@@ -23,7 +23,7 @@ export default function page() {
     onSuccess: () => {
       console.log("user creation completed");
     },
-  });
+  }); */
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const userData = {
