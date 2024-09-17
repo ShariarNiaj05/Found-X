@@ -17,7 +17,7 @@ const LoginPage = () => {
   return (
     <>
       <div className="bg-black/10  h-screen fixed inset-0 z[99] backdrop-blur-md">
-        <Spinner />
+        <Spinner size="lg" />
       </div>
       <div className="flex h-[calc(100vh-200px)] w-full flex-col items-center justify-center">
         <h3 className="my-2 text-2xl font-bold">Login with FoundX</h3>
