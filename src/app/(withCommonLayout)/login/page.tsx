@@ -13,7 +13,8 @@ import { useSearchParams } from "next/navigation";
 
 const LoginPage = () => {
   const searchParams = useSearchParams();
-
+  const { redirect } = searchParams.get("redirect");
+  console.log(redirect);
   const { mutate: handleUserLogin, isPending } = useUserLogin();
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     handleUserLogin(data);
