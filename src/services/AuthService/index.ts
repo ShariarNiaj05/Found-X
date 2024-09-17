@@ -35,5 +35,5 @@ export const loginUser = async (userData: FieldValues) => {
 };
 
 export const getCurrentUser = async () => {
-  const accessToken = cookies().get("accessToken");
+  const accessToken = cookies().get("accessToken")?.value;
 };
