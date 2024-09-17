@@ -36,4 +36,10 @@ export const loginUser = async (userData: FieldValues) => {
 
 export const getCurrentUser = async () => {
   const accessToken = cookies().get("accessToken")?.value;
+
+  let decodedToken = null;
+
+  if (accessToken) {
+    decodedToken = jwt;
+  }
 };
