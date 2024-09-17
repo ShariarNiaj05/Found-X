@@ -52,4 +52,5 @@ export const getCurrentUser = async () => {
       status: decodedToken?.status,
     };
   }
+  return decodedToken;
 };
