@@ -15,7 +15,7 @@ import Loading from "@/src/components/UI/Loading";
 const LoginPage = () => {
   const { mutate: handleUserLogin, isPending } = useUserLogin();
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    console.log(data);
+    handleUserLogin(data);
   };
   return (
     <>
