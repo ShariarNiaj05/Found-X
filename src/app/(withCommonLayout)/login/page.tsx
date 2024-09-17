@@ -9,8 +9,11 @@ import FXForm from "@/src/components/form/FXForm";
 import { loginValidationSchema } from "@/src/schemas/login.schema";
 import { useUserLogin } from "@/src/hooks/auth.hook";
 import Loading from "@/src/components/UI/Loading";
+import { useSearchParams } from "next/navigation";
 
 const LoginPage = () => {
+  const searchParams = useSearchParams();
+
   const { mutate: handleUserLogin, isPending } = useUserLogin();
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     handleUserLogin(data);
