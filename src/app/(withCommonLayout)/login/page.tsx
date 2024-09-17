@@ -19,6 +19,10 @@ const LoginPage = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     handleUserLogin(data);
   };
+
+  if (!isPending && isSuccess) {
+  }
+
   return (
     <>
       {isPending && <Loading />}
