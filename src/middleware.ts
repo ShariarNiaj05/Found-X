@@ -24,8 +24,8 @@ export async function middleware(request: NextRequest) {
     token: "adsf asda",
     role: "USER",
   }; */
-  const user = await getCurrentUser();
-  // const user = undefined;
+  const userToken = await getCurrentUser();
+  const user = undefined;
 
   if (!user) {
     if (AuthRoutes.includes(pathname)) {
