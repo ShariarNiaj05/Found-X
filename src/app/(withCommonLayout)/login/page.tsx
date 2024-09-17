@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import FXInput from "@/src/components/form/FXInput";
 import FXForm from "@/src/components/form/FXForm";
 import { loginValidationSchema } from "@/src/schemas/login.schema";
+import { Spinner } from "@nextui-org/spinner";
 
 const LoginPage = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
@@ -15,7 +16,9 @@ const LoginPage = () => {
   };
   return (
     <>
-      <div className="bg-black/10  h-screen fixed inset-0 z[99] backdrop-blur-md"></div>
+      <div className="bg-black/10  h-screen fixed inset-0 z[99] backdrop-blur-md">
+        <Spinner />
+      </div>
       <div className="flex h-[calc(100vh-200px)] w-full flex-col items-center justify-center">
         <h3 className="my-2 text-2xl font-bold">Login with FoundX</h3>
         <p className="mb-4">Welcome Back! Let&lsquo;s Get Started</p>
