@@ -1,5 +1,7 @@
 "use client";
+import { logout } from "@/src/services/AuthService";
 import { Avatar } from "@nextui-org/avatar";
+import { Button } from "@nextui-org/button";
 import {
   Dropdown,
   DropdownItem,
@@ -30,9 +32,11 @@ export default function NavbarDropdown() {
         <DropdownItem onClick={() => handleNavigation("/profile/create-post")}>
           Create Post
         </DropdownItem>
-        <DropdownItem key="delete" className="text-danger" color="danger">
-          Logout
-        </DropdownItem>
+        <Button onCanPlay={logout}>
+          <DropdownItem key="delete" className="text-danger" color="danger">
+            Logout
+          </DropdownItem>
+        </Button>
       </DropdownMenu>
     </Dropdown>
   );
