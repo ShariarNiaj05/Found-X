@@ -26,6 +26,8 @@ const LoginPage = () => {
   if (!isPending && isSuccess) {
     if (redirect) {
       router.push(redirect);
+    } else {
+      router.push("/");
     }
   }
 
