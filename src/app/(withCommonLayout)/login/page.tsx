@@ -4,7 +4,6 @@ import { Button } from "@nextui-org/button";
 import Link from "next/link";
 import { FieldValues, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-
 import FXInput from "@/src/components/form/FXInput";
 import FXForm from "@/src/components/form/FXForm";
 import { loginValidationSchema } from "@/src/schemas/login.schema";
