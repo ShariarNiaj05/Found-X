@@ -10,9 +10,12 @@ import { loginValidationSchema } from "@/src/schemas/login.schema";
 import { useUserLogin } from "@/src/hooks/auth.hook";
 import Loading from "@/src/components/UI/Loading";
 import { useSearchParams } from "next/navigation";
+import { useRouter } from "next/router";
 
 const LoginPage = () => {
   const searchParams = useSearchParams();
+  const router = useRouter();
+
   const { redirect } = searchParams.get("redirect");
   console.log(redirect);
   const { mutate: handleUserLogin, isPending, isSuccess } = useUserLogin();
@@ -21,6 +24,9 @@ const LoginPage = () => {
   };
 
   if (!isPending && isSuccess) {
+    if (redirect) {
+      router.push(redirect);
+    }
   }
 
   return (
