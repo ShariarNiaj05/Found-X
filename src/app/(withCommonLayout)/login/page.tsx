@@ -8,7 +8,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import FXInput from "@/src/components/form/FXInput";
 import FXForm from "@/src/components/form/FXForm";
 import { loginValidationSchema } from "@/src/schemas/login.schema";
-import { Spinner } from "@nextui-org/spinner";
 import { useUserLogin } from "@/src/hooks/auth.hook";
 import Loading from "@/src/components/UI/Loading";
 
