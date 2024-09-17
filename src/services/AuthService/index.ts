@@ -5,6 +5,7 @@ import { FieldValues } from "react-hook-form";
 
 import axiosInstance from "@/src/lib/AxiosInstance";
 import { Cookie } from "next/font/google";
+import { jwtDecode } from "jwt-decode";
 
 export const registerUser = async (userData: FieldValues) => {
   try {
@@ -40,6 +41,6 @@ export const getCurrentUser = async () => {
   let decodedToken = null;
 
   if (accessToken) {
-    decodedToken = jwt;
+    decodedToken = jwtDecode(accessToken);
   }
 };
