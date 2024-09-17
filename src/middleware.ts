@@ -25,7 +25,7 @@ export async function middleware(request: NextRequest) {
     role: "USER",
   }; */
   const user = await getCurrentUser();
-  const user = undefined;
+  // const user = undefined;
 
   if (!user) {
     if (AuthRoutes.includes(pathname)) {
