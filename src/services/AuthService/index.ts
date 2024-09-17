@@ -4,6 +4,7 @@ import { cookies } from "next/headers";
 import { FieldValues } from "react-hook-form";
 
 import axiosInstance from "@/src/lib/AxiosInstance";
+import { Cookie } from "next/font/google";
 
 export const registerUser = async (userData: FieldValues) => {
   try {
@@ -31,4 +32,8 @@ export const loginUser = async (userData: FieldValues) => {
   } catch (error: any) {
     throw new Error(error);
   }
+};
+
+export const getCurrentUser = async () => {
+  const accessToken = cookies().get("accessToken");
 };
