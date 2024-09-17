@@ -16,7 +16,7 @@ const LoginPage = () => {
   };
   return (
     <>
-      <div className="bg-black/10  h-screen fixed inset-0 z[99] backdrop-blur-md">
+      <div className="bg-black/10  h-screen fixed inset-0 z[99] backdrop-blur-md flex justify-center items-center">
         <Spinner size="lg" />
       </div>
       <div className="flex h-[calc(100vh-200px)] w-full flex-col items-center justify-center">
