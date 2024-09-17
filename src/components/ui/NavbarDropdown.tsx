@@ -32,11 +32,15 @@ export default function NavbarDropdown() {
         <DropdownItem onClick={() => handleNavigation("/profile/create-post")}>
           Create Post
         </DropdownItem>
-        <Button onClick={() => logout()}>
-          <DropdownItem key="delete" className="text-danger" color="danger">
-            Logout
-          </DropdownItem>
-        </Button>
+
+        <DropdownItem
+          key="delete"
+          onClick={() => logout()}
+          className="text-danger"
+          color="danger"
+        >
+          Logout
+        </DropdownItem>
       </DropdownMenu>
     </Dropdown>
   );
