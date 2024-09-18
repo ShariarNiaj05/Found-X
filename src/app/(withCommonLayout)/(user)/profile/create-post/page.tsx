@@ -39,6 +39,7 @@ export default function page() {
             <Button onClick={() => handleFieldAppend()}>Append</Button>
           </div>
 
+          <Divider className="my-5" />
           <Button type="submit">Post</Button>
         </form>
       </FormProvider>
