@@ -1,4 +1,4 @@
-import { createContext, Dispatch, SetStateAction, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
 import { IUser } from "../types";
 
 
@@ -10,7 +10,7 @@ interface IUserProviderValue {
 }
 const UserContext = createContext<IUserProviderValue | undefined>(undefined);
 
-const UserProvider = () => {
+const UserProvider = ({ children }: { children: ReactNode }) => {
     const [user, setUser] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
 
