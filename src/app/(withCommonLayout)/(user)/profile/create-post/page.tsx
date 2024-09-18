@@ -42,6 +42,7 @@ export default function page() {
           {fields.map((field, index) => (
             <div key={field.id} className="flex items-center">
               <FXInput name={`questions.${index}.value`} label="Question" />
+              <Button onClick={() => remove(index)}>Remove</Button>
             </div>
           ))}
 
