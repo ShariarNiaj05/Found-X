@@ -1,5 +1,6 @@
 "use client";
-import { useFieldArray, useForm } from "react-hook-form";
+import FXInput from "@/src/components/form/FXInput";
+import { FormProvider, useFieldArray, useForm } from "react-hook-form";
 
 export default function page() {
   const { control } = useForm();
@@ -9,7 +10,9 @@ export default function page() {
   });
   return (
     <div>
-      <h1> Create Post Page </h1>
+      <FormProvider>
+        <FXInput name="title" label="Title" />
+      </FormProvider>
     </div>
   );
 }
