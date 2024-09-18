@@ -20,9 +20,10 @@ const UserContext = createContext<IUserProviderValue | undefined>(undefined);
 
 const UserProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<IUser | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleUser = async () => {
+    setIsLoading(true);
     const currentUser = await getCurrentUser();
     setUser(currentUser);
     setIsLoading(false);
