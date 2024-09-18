@@ -20,7 +20,7 @@ export default function NavbarDropdown() {
 
   const handleLogout = () => {
     logout();
-    setUserLoading(false);
+    setUserLoading(true);
   };
 
   return (
