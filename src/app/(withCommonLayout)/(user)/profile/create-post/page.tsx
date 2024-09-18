@@ -23,6 +23,10 @@ export default function page() {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     console.log(data);
   };
+
+  const handleFieldAppend = () => {
+    append({ name: "questions" });
+  };
   return (
     <div>
       <FormProvider {...methods}>
