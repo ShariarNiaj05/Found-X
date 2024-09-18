@@ -23,7 +23,12 @@ export default function page() {
   });
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    console.log(data);
+    const postData = {
+      ...data,
+      questions: data.questions.map((que: { value: string }) => que.value),
+    };
+
+    console.log(postData);
   };
 
   const handleFieldAppend = () => {
