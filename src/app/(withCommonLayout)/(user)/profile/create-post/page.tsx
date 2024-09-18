@@ -39,11 +39,11 @@ export default function page() {
             <Button onClick={() => handleFieldAppend()}>Append</Button>
           </div>
 
-          {fields?.map(field, index) => (
-          <div key={field.id}>
-            <FXInput name={`questions.${index + 1}.value`} label="Questions"/>
-          </div>
-          )}
+          {fields.map((field, index) => (
+            <div key={field.id} className="flex items-center">
+              <FXInput name={`questions.${index}.value`} label="Question" />
+            </div>
+          ))}
 
           <Divider className="my-5" />
           <Button type="submit">Post</Button>
