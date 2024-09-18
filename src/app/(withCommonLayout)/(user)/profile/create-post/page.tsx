@@ -13,7 +13,7 @@ import {
 export default function page() {
   const methods = useForm();
   const { control, handleSubmit } = methods;
-  const {} = useFieldArray({
+  const { append, remove } = useFieldArray({
     control,
     name: "questions",
   });
