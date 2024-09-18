@@ -7,6 +7,7 @@ import {
   useState,
 } from "react";
 import { IUser } from "../types";
+import { getCurrentUser } from "../services/AuthService";
 
 interface IUserProviderValue {
   user: IUser | null;
@@ -20,6 +21,9 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<IUser | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  const handleUser = async () => {
+    return (user = await getCurrentUser());
+  };
   useEffect(() => {}, []);
   return (
     <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading }}>
