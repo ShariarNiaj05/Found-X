@@ -41,6 +41,7 @@ const useUser = () => {
   const context = useContext(UserContext);
 
   if (context === undefined) {
+    throw new Error("UseUser must be used within the UserProvider context");
   }
   return context;
 };
