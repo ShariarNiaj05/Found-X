@@ -16,13 +16,13 @@ import { useUser } from "@/src/context/user.provider";
 const LoginPage = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
-  const { setIsLoading } = useUser();
+  const { setIsLoading: setUserLoading } = useUser();
   const redirect = searchParams.get("redirect");
   console.log(redirect);
   const { mutate: handleUserLogin, isPending, isSuccess } = useUserLogin();
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     handleUserLogin(data);
-    setIsLoading(false);
+    setUserLoading(false);
   };
 
   useEffect(() => {
