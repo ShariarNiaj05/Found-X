@@ -18,7 +18,10 @@ export default function NavbarDropdown() {
     router.push(pathname);
   };
 
-  const handleLogout = () => {};
+  const handleLogout = () => {
+    logout();
+    setUserLoading(false);
+  };
 
   return (
     <Dropdown>
