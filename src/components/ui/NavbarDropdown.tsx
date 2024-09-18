@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation";
 
 export default function NavbarDropdown() {
   const router = useRouter();
-  const { setIsLoading: setUserLoading } = useUser();
+  const { user, setIsLoading: setUserLoading } = useUser();
   const handleNavigation = (pathname: string) => {
     router.push(pathname);
   };
@@ -25,7 +25,11 @@ export default function NavbarDropdown() {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Avatar className="cursor-pointer" name="Joe" />
+        <Avatar
+          className="cursor-pointer"
+          name="Joe"
+          src={user?.profilePhoto}
+        />
       </DropdownTrigger>
       <DropdownMenu aria-label="Static Actions">
         <DropdownItem onClick={() => handleNavigation("/profile")}>
