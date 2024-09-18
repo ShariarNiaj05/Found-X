@@ -7,6 +7,7 @@ interface IUserProviderValue {
     user: IUser | null
     loading: boolean
     setUser: (user: IUser) => void
+    setIsLoading: (loading: boolean) => void
 }
 const UserProvider = () => {
     const [user, setUser] = useState(null)
