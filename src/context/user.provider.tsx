@@ -3,6 +3,7 @@ import {
   Dispatch,
   ReactNode,
   SetStateAction,
+  useEffect,
   useState,
 } from "react";
 import { IUser } from "../types";
@@ -19,6 +20,7 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<IUser | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {}, []);
   return (
     <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading }}>
       {children}
