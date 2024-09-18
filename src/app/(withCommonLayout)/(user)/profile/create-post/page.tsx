@@ -3,7 +3,8 @@ import FXInput from "@/src/components/form/FXInput";
 import { FormProvider, useFieldArray, useForm } from "react-hook-form";
 
 export default function page() {
-  const { control } = useForm();
+  const methods = useForm();
+  const { control } = methods;
   const {} = useFieldArray({
     control,
     name: "questions",
