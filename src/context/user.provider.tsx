@@ -3,6 +3,7 @@ import {
   Dispatch,
   ReactNode,
   SetStateAction,
+  useContext,
   useEffect,
   useState,
 } from "react";
@@ -36,6 +37,9 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-const useUser = () => {};
+const useUser = () => {
+  const context = useContext(UserContext);
+  return context;
+};
 
 export default UserProvider;
