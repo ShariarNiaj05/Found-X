@@ -16,7 +16,9 @@ const UserProvider = () => {
 
 
     return {
-       <UserContext.Provider  value={{user, setUser,isLoading, setIsLoading}}></UserContext.Provider>
+        <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading}} >
+        {children}
+      </UserContext.Provider>
     }
 };
 
