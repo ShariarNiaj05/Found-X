@@ -18,7 +18,7 @@ export default function page() {
   });
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    console.log(postData);
+    console.log(data);
   };
   return (
     <div>
