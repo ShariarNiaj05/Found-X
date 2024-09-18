@@ -21,8 +21,8 @@ const LoginPage = () => {
   console.log(redirect);
   const { mutate: handleUserLogin, isPending, isSuccess } = useUserLogin();
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    setUserLoading(true);
     handleUserLogin(data);
-    setUserLoading(false);
   };
 
   useEffect(() => {
