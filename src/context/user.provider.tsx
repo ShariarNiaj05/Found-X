@@ -9,7 +9,7 @@ import { IUser } from "../types";
 
 interface IUserProviderValue {
   user: IUser | null;
-  loading: boolean;
+  isLoading: boolean;
   setUser: (user: IUser | null) => void;
   setIsLoading: Dispatch<SetStateAction<boolean>>;
 }
