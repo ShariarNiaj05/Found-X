@@ -16,7 +16,7 @@ interface IUserProviderValue {
 const UserContext = createContext<IUserProviderValue | undefined>(undefined);
 
 const UserProvider = ({ children }: { children: ReactNode }) => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<IUser | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
   return (
