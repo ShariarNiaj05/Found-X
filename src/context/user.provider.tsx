@@ -39,6 +39,9 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
 
 const useUser = () => {
   const context = useContext(UserContext);
+
+  if (context === undefined) {
+  }
   return context;
 };
 
