@@ -1,7 +1,6 @@
 import { createContext, Dispatch, SetStateAction, useState } from "react";
 import { IUser } from "../types";
 
-const UserContext = createContext(undefined);
 
 interface IUserProviderValue {
     user: IUser | null
@@ -9,6 +8,8 @@ interface IUserProviderValue {
     setUser: (user: IUser | null) => void
     setIsLoading: Dispatch<SetStateAction<boolean>>
 }
+const UserContext = createContext<IUserProviderValue | undefined>(undefined);
+
 const UserProvider = () => {
     const [user, setUser] = useState(null)
     const [isLoading, setIsLoading] = useState(false)
