@@ -41,7 +41,7 @@ export default function NavbarDropdown() {
 
         <DropdownItem
           key="delete"
-          onClick={handleLogout}
+          onClick={() => handleLogout()}
           className="text-danger"
           color="danger"
         >
