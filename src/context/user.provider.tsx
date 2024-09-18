@@ -6,6 +6,7 @@ const UserContext = createContext(undefined);
 interface IUserProviderValue {
     user: IUser | null
     loading: boolean
+    setUser: (user: IUser) => void
 }
 const UserProvider = () => {
     const [user, setUser] = useState(null)
