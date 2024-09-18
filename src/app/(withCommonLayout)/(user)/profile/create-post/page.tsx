@@ -39,6 +39,8 @@ export default function page() {
             <Button onClick={() => handleFieldAppend()}>Append</Button>
           </div>
 
+          {fields?.map(field, index) => <FXInput name={`que`} label="Questions"/>}
+
           <Divider className="my-5" />
           <Button type="submit">Post</Button>
         </form>
