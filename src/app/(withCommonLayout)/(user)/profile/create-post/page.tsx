@@ -11,7 +11,7 @@ export default function page() {
   });
   return (
     <div>
-      <FormProvider>
+      <FormProvider {...methods}>
         <FXInput name="title" label="Title" />
       </FormProvider>
     </div>
