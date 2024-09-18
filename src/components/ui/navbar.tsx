@@ -21,7 +21,7 @@ import { Logo } from "@/src/components/icons";
 import { useUser } from "@/src/context/user.provider";
 
 export const Navbar = () => {
-  const { user, isLoading } = useUser();
+  const { user } = useUser();
   return (
     <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
