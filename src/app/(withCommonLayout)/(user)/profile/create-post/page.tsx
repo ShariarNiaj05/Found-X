@@ -2,6 +2,8 @@
 
 import FXInput from "@/src/components/form/FXInput";
 import { Button } from "@nextui-org/button";
+import { Divider } from "@nextui-org/divider";
+
 import {
   FieldValues,
   FormProvider,
@@ -26,7 +28,7 @@ export default function page() {
       <FormProvider {...methods}>
         <form onSubmit={handleSubmit(onSubmit)}>
           <FXInput name="title" label="Title" />
-
+          <Divider className="my-5" />
           <Button type="submit">Post</Button>
         </form>
       </FormProvider>
