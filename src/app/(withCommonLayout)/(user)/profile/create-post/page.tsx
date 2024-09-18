@@ -5,7 +5,7 @@ import { FormProvider, useFieldArray, useForm } from "react-hook-form";
 
 export default function page() {
   const methods = useForm();
-  const { control } = methods;
+  const { control, handleSubmit } = methods;
   const {} = useFieldArray({
     control,
     name: "questions",
