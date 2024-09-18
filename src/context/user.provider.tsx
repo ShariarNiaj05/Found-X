@@ -36,4 +36,6 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+const useUser = () => {};
+
 export default UserProvider;
