@@ -27,7 +27,7 @@ export default function NavbarDropdown() {
       <DropdownTrigger>
         <Avatar
           className="cursor-pointer"
-          name="Joe"
+          // name="Joe"
           src={user?.profilePhoto}
         />
       </DropdownTrigger>
