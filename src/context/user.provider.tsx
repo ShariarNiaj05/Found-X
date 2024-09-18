@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const userContext = createContext(undefined);
+const UserContext = createContext(undefined);
 
 const UserProvider = () => {
     const [user, setUser] = useState(null)
@@ -8,9 +8,7 @@ const UserProvider = () => {
 
 
     return {
-        <userContext.Provider value = {{user, setUser,isLoading, setIsLoading}}>
-        
-        </userContext.Provider >
+       <UserContext.Provider  value={{user, setUser,isLoading, setIsLoading}}></UserContext.Provider>
     }
 };
 
