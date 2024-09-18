@@ -29,6 +29,11 @@ export default function page() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <FXInput name="title" label="Title" />
           <Divider className="my-5" />
+
+          <div className="flex justify-between items-center">
+            <h1 className="text-xl">Owner verification questions</h1>
+          </div>
+
           <Button type="submit">Post</Button>
         </form>
       </FormProvider>
