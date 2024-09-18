@@ -32,6 +32,7 @@ export default function page() {
 
           <div className="flex justify-between items-center">
             <h1 className="text-xl">Owner verification questions</h1>
+            <Button onClick={() => handleFieldAppend()}>Append</Button>
           </div>
 
           <Button type="submit">Post</Button>
