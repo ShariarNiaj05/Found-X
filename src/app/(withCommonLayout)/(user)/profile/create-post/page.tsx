@@ -15,7 +15,7 @@ import {
 export default function page() {
   const methods = useForm();
   const { control, handleSubmit } = methods;
-  const { append, remove } = useFieldArray({
+  const { fields, append, remove } = useFieldArray({
     control,
     name: "questions",
   });
