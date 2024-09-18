@@ -55,9 +55,13 @@ export const Navbar = () => {
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>
-        {user && (
+        {user?.email ? (
           <NavbarItem className="hidden sm:flex gap-2">
             <NavbarDropdown />
+          </NavbarItem>
+        ) : (
+          <NavbarItem className="hidden sm:flex gap-2">
+            <Link href="/login">Login</Link>
           </NavbarItem>
         )}
       </NavbarContent>
