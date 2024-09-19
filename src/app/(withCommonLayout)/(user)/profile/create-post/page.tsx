@@ -15,6 +15,8 @@ import {
 export default function page() {
   const methods = useForm();
 
+  // control and handleSubmit from react hook form
+
   const { control, handleSubmit } = methods;
 
   const { fields, append, remove } = useFieldArray({
