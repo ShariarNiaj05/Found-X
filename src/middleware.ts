@@ -3,7 +3,6 @@ import type { NextRequest } from "next/server";
 
 import { NextResponse } from "next/server";
 import { getCurrentUser } from "./services/AuthService";
-import { protectedRoutes } from "./constant";
 
 const AuthRoutes = ["/login", "/register"];
 
@@ -42,5 +41,5 @@ export async function middleware(request: NextRequest) {
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: protectedRoutes,
+  matcher: ["/profile", "/profile/:page*", "/admin", "/login", "/register"],
 };
