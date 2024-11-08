@@ -14,7 +14,7 @@ import {
   useForm,
 } from "react-hook-form";
 
-export default function page() {
+export default function CreatePost() {
   const methods = useForm();
 
   // control and handleSubmit from react hook form
