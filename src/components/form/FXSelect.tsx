@@ -7,7 +7,13 @@ interface IProps extends IInput {
     label: string;
   }[];
 }
-const FXSelect = () => {
+const FXSelect = ({
+  options,
+  name,
+  label,
+  variant = "bordered",
+  disabled,
+}: IProps) => {
   return (
     <Select
       {...register(name)}
