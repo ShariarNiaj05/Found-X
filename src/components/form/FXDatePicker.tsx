@@ -3,7 +3,7 @@ import { Controller } from "react-hook-form";
 
 import { IInput } from "@/src/types";
 
-const FXDatePicker = () => {
+const FXDatePicker = ({ label, name, variant = "bordered" }) => {
   return (
     <Controller
       name={name}
