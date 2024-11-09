@@ -3,7 +3,9 @@ import { Controller } from "react-hook-form";
 
 import { IInput } from "@/src/types";
 
-const FXDatePicker = ({ label, name, variant = "bordered" }) => {
+interface IProps extends IInput {}
+
+const FXDatePicker = ({ label, name, variant = "bordered" }: IProps) => {
   return (
     <Controller
       name={name}
