@@ -1,5 +1,12 @@
 import { Select, SelectItem } from "@nextui-org/select";
 import { useFormContext } from "react-hook-form";
+
+interface IProps extends IInput {
+  options: {
+    key: string;
+    label: string;
+  }[];
+}
 const FXSelect = () => {
   return (
     <Select
