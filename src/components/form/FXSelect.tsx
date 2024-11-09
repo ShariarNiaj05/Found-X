@@ -14,6 +14,10 @@ const FXSelect = ({
   variant = "bordered",
   disabled,
 }: IProps) => {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
   return (
     <Select
       {...register(name)}
