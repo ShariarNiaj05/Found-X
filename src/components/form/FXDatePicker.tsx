@@ -1,4 +1,5 @@
-import React from "react";
+import { DatePicker } from "@nextui-org/date-picker";
+import { Controller } from "react-hook-form";
 
 const FXDatePicker = () => {
   return (
