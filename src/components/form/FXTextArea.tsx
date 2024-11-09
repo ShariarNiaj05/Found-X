@@ -6,7 +6,7 @@ import { IInput } from "@/src/types";
 interface IProps extends IInput {
   type?: string;
 }
-const FXTextArea = () => {
+const FXTextArea = ({ name, label, variant = "bordered" }: IProps) => {
   return (
     <Textarea {...register(name)} label={label} minRows={6} variant={variant} />
   );
