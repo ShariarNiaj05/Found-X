@@ -1,4 +1,5 @@
-import React from "react";
+import { Textarea } from "@nextui-org/input";
+import { useFormContext } from "react-hook-form";
 
 const FXTextArea = () => {
   return (
